@@ -1,3 +1,24 @@
+--------------------------------------
+lloguers
+----------------------------------
+
+basat en la plantilla react "create react app" - 29-10-2018
+
+components
+
+general ( carrega l'estat i el passa a la resta de components )
+llista de lloguers
+lloguers especifics ( state amb dades úniques)
+llogaters
+edifici
+contractes
+
+
+--------------------------------------
+australian version
+--------------------------------------
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
