@@ -13,18 +13,18 @@ class LLoguersLListat extends Component {
 		const arrayLLoguers = Object.values(lloguers)
 		
     	return (	  
-	       	<div className="llista">
+	       	<ul>
 	        	{arrayLLoguers.map((ll, k) =>
-	        		<div 
+	        		<li
 	        			key={k}
 	        			value={ll.id}
 	        			onClick={this.handleClick}
-	        			className="item"
 	        		>
-	        		{ll.nom}
-	        		</div>
+	        		<a href="#">{ll.nom}</a>
+	        		
+	        		</li>
 	        	)}
-	        </div>
+	        </ul>
     	)
   	}
 }
