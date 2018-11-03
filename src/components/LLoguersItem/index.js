@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router} from 'react-router-dom'
+import { collect } from 'react-recollect';
+import store from '../../data';
 import './style.css';
-//import {lloguers} from '../../data'
-import { store } from 'react-recollect';
 
 
 class LLoguersItem extends Component {
 
-	state = {
-    	itemLLoguer: null
-  	}	
-  	
+	  	
 
   	render() {
 
@@ -22,9 +20,10 @@ class LLoguersItem extends Component {
 	    	<p>item  lloguerItem :</p>
 	    	<p>{match.path}</p>
 	    	<p>{match.url}</p> 
+	    	<p>{itemLLoguer.id}</p>
 	    	</div>	    	
     	)
   	}
 }
 
-export default LLoguersItem;
+export default collect(LLoguersItem);

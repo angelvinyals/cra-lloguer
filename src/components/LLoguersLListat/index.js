@@ -16,7 +16,7 @@ class LLoguersLListat extends Component {
 		const arrayLLoguers = Object.values(store.lloguers)
 		console.log(arrayLLoguers)
     	return (
-    		<Router>
+    	
 			    <div className="Lloguers">
 			        <header className="App-header">    
 			        	<p>Lloguers</p>
@@ -27,6 +27,7 @@ class LLoguersLListat extends Component {
 			        			<Link 
 			        				to={`/lloguers/${ll.id}`}
 									className={'link'}
+
 			        			>
 			        				{ll.nom}
 			        			</Link>
@@ -34,9 +35,9 @@ class LLoguersLListat extends Component {
 			        	)}
 			        </ul>
 
-			        <Route path={`/lloguers/:itemLLoguer`} component={LLoguersItem}/>	        	        
+			        	        	        
 			    </div>
-		    </Router>
+		  
     	)
   	}
 }
