@@ -1,4 +1,6 @@
-export const lloguers={
+import { store } from 'react-recollect'
+
+store.lloguers={
 	'rossinyol10':{
 		'id':'rossinyol10',
 		'nom':"carrer rossinyol, 10",
@@ -22,7 +24,7 @@ export const lloguers={
 
 }
 
-export const propietaris={
+store.propietaris={
 	'43673401n':{
 		'id':'43673401n',
 		'nom':"angel vinyals"
@@ -30,7 +32,7 @@ export const propietaris={
 	},
 }
 
-export const llogaters={
+store.llogaters={
 	'43218765c':{
 		'id':'43218765c',
 		'nom':"joan prim",
@@ -45,7 +47,7 @@ export const llogaters={
 	},
 }
 
-export const contractes={
+store.contractes={
 	'contracte20170616':{
 		'id':'contracte20170616',
 		'localLLogat':"trasmuralla48",
@@ -76,3 +78,5 @@ export const contractes={
 		}
 	},
 }
+
+export default store

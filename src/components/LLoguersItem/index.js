@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './style.css';
-import {lloguers} from '../../data'
+//import {lloguers} from '../../data'
+import { store } from 'react-recollect';
 
 
 class LLoguersItem extends Component {
@@ -13,7 +14,7 @@ class LLoguersItem extends Component {
   	render() {
 
   		const { match} = this.props
-		const itemLLoguer = lloguers[match.params.itemLLoguer]
+		const itemLLoguer = store.lloguers[match.params.itemLLoguer]
 		console.log(itemLLoguer)
 
     	return (

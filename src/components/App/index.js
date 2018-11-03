@@ -7,9 +7,9 @@ import {
 } from 'react-router-dom';
 import './style.css';
 import Inici from '../Inici'
-import LLoguer from  '../LLoguer'
+import LLoguersLListat from  '../LLoguersLListat'
 import ComponentNoTrobat from '../ComponentNoTrobat'
-import {lloguers} from '../../data'
+
 
 
 class App extends Component {
@@ -18,7 +18,7 @@ class App extends Component {
       <Router>          
           <Switch>
             <Route exact path='/' component={Inici}></Route>
-            <Route exact path='/lloguers' component={LLoguer}></Route>
+            <Route exact path='/lloguers' component={LLoguersLListat}></Route>
             <Route component={ComponentNoTrobat}></Route>
           </Switch>
      

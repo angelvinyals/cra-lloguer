@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router} from 'react-router-dom'
+import { collect, store } from 'react-recollect';
 import './style.css';
 import LLoguersLListat from '../LLoguersLListat'
 import {lloguers} from '../../data'
@@ -14,13 +15,11 @@ class LLoguer extends Component {
 		        <header className="App-header">    
 		        	<p>Lloguers</p>
 		        </header>
-		        <LLoguersLListat 
-		        	lloguers={lloguers}
-		        />		        	        
+		        <LLoguersLListat/>		        	        
 		    </div>
 	    </Router>
     );
   }
 }
 
-export default LLoguer;
+export default collect(LLoguer)
