@@ -1,18 +1,27 @@
 import React, { Component } from 'react';
 import './style.css';
+import {lloguers} from '../../data'
 
 
 class LLoguersItem extends Component {
 
+	state = {
+    	itemLLoguer: null
+  	}	
+  	
 
   	render() {
 
-  		const {itemLLoguers} = this.props
-		
+  		const { match} = this.props
+		const itemLLoguer = lloguers[match.params.itemLLoguer]
+		console.log(itemLLoguer)
+
     	return (
-	    	
-	        	<li>{itemLLoguers.nom}</li>
-	    	
+	    	<div>
+	    	<p>item  lloguerItem :</p>
+	    	<p>{match.path}</p>
+	    	<p>{match.url}</p> 
+	    	</div>	    	
     	)
   	}
 }

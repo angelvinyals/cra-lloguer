@@ -8,32 +8,27 @@ import './style.css';
 
 class LLoguersLListat extends Component {
 
-	handleClick = (e) =>{
-		console.log('hi ha un click que es ', e.target.value)
-	}
-
   	render() {
 
-  		const {lloguers} = this.props
+  		const {lloguers, match} = this.props
 		const arrayLLoguers = Object.values(lloguers)
 		
     	return (
     	<React.Fragment key={'llistadeLloguers'}>	  
 	       	<ul>
 	        	{arrayLLoguers.map((ll, k) =>
-	        		<li
-	        			key={k}
-	        			value={ll.id}
-	        		>
+	        		<li key={k}>
 	        			<Link 
-	        				to={`lloguers/${ll.id}`}
+	        				to={`/lloguers/${ll.id}`}
 							className={'link'}
-	        			>{ll.nom}</Link>
+	        			>
+	        				{ll.nom}
+	        			</Link>
 	        		</li>
 	        	)}
 	        </ul>
 
-	        <Route path={`/lloguers/`} component={LLoguersItem}/>
+	        <Route path={`/lloguers/:itemLLoguer`} component={LLoguersItem}/>
 	    </React.Fragment>
     	)
   	}
