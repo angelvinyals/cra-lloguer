@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router} from 'react-router-dom'
 import { collect } from 'react-recollect';
+import Button from 'antd/lib/button';
 import store from '../../data';
 import {
   Link,
   Route
 } from 'react-router-dom'
 import LLoguersItem from '../LLoguersItem'
+import MenuPrincipal from '../MenuPrincipal'
 import './style.css';
 
 class LLoguersLListat extends Component {
@@ -18,9 +19,7 @@ class LLoguersLListat extends Component {
     	return (
     	
 			    <div className="Lloguers">
-			        <header className="App-header">    
-			        	<p>Lloguers</p>
-			        </header>
+			        <MenuPrincipal/>
 			        <ul>
 			        	{arrayLLoguers.map((ll, k) =>
 			        		<li key={k}>

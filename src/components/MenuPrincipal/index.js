@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import { collect } from 'react-recollect';
 import { Menu, Icon } from 'antd';
-import store from '../../data';
+import {
+  Link,
+} from 'react-router-dom'
 import './style.css';
 
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 
-class LLoguersItem extends Component {
+class MenuPrincipal extends Component {
 
 	state = {
 	    current: 'mail',
@@ -15,30 +16,27 @@ class LLoguersItem extends Component {
 
 	handleClick = (e) => {
 	    console.log('click ', e);
-	    this.setState({
-	      current: e.key,
-	    });
+	  
+	   return       
 	}
 	  	
 
   	render() {
 
-  		const { match} = this.props
-		const itemLLoguer = store.lloguers[match.params.itemLLoguer]
-		console.log(itemLLoguer)
-
     	return (
-	    	<div>
+	    
 	    		<Menu
 			        onClick={this.handleClick}
 			        selectedKeys={[this.state.current]}
 			        mode="horizontal"
 			    >
-			        <Menu.Item key="mail">
-			        	<Icon type="mail" />Navigation One
+			        <Menu.Item key="lloguers">
+			        	<Link to='/lloguers'>
+			        		<Icon type="menu-unfold" />LLoguers
+			        	</Link>			
 			        </Menu.Item>
-			        <Menu.Item key="app" disabled>
-			        	<Icon type="appstore" />Navigation Two
+			        <Menu.Item key="login" >
+			        	<Icon type="login" />Inici
 			        </Menu.Item>
 			        <SubMenu title={<span className="submenu-title-wrapper"><Icon type="setting" />Navigation Three - Submenu</span>}>
 			        	<MenuItemGroup title="Item 1">
@@ -53,15 +51,10 @@ class LLoguersItem extends Component {
 			        <Menu.Item key="alipay">
 			        		<a href="https://ant.design" target="_blank" rel="noopener noreferrer">Navigation Four - Link</a>
 			        </Menu.Item>
-			    </Menu>
-			
-		    	<p>item  lloguerItem :</p>
-		    	<p>{match.path}</p>
-		    	<p>{match.url}</p> 
-		    	<p>{itemLLoguer.id}</p>
-	    	</div>	    	
+			    </Menu>   	
+	    	    	
     	)
   	}
 }
 
-export default collect(LLoguersItem);
+export default MenuPrincipal;
